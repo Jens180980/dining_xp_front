@@ -17,7 +17,7 @@ const Home = () => {
     useEffect( () => {
         getGeneralContent().then((result) => {
             setGeneralContent(result.data.data)
-            console.log(generalContent?.[0].map.coordinates.reverse())
+            console.log(generalContent)
         });  
            
         
