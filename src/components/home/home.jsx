@@ -1,31 +1,15 @@
-import { useContext, useEffect, useState } from "react"
-import axios from 'axios'
+import { useContext } from "react"
 import { generalContentCtx } from "../../App"
 import Hero from '../hero/hero.jsx'
 import './home.scss'
-import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import "leaflet/dist/leaflet.css";
-import { getGeneralContent } from "../../helpers/apicalls"
 
 
 const Home = () => {
-
-    const [generalContent, setGeneralContent] = useState();
-    const [mapPosition, setMapPosition] = useState()
-
-    // Api calls   
-    useEffect( () => {
-        getGeneralContent().then((result) => {
-            setGeneralContent(result.data.data)
-            console.log(generalContent)
-        });  
-           
-        
-    }, []);   
-
-    // const generalContent = useContext(generalContentCtx)
-    const introduction = generalContent?.[0].introduction
-    // console.log(mapPosition)      
+    const generalContent = useContext(generalContentCtx)
+    const mapPosition = [57.0411, 9.9013] 
+    const introduction = generalContent?.[0].introduction    
     
     return (
         <section>

@@ -12,7 +12,8 @@ import Contacts from './components/contacts/contacts.jsx'
 
 //Import modular components
 import Main from './components/main/main.jsx';
-import Header from './components/header/header';
+import Header from './components/header/header.jsx';
+import Footer from './components/footer/footer.jsx'
 
 // Import styles
 import './App.scss';
@@ -35,11 +36,14 @@ const App = () => {
       });
 
       getRestaurants().then((apiRestaurants) => {
-        setRestaurantData(apiRestaurants.data);
+        setRestaurantData(apiRestaurants.data.data);
       });
 
     };
+    
     getData();
+  
+
   }, []);
 
   
@@ -59,6 +63,7 @@ const App = () => {
                 <Route path="/contact" element={<Contacts />} /> 
               </Routes>
             </Main>
+            <Footer />
         </Router>
       </generalContentCtx.Provider>
       </restaurantCtx.Provider>
