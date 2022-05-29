@@ -20,7 +20,7 @@ import './App.scss';
 
 // Data management
 export const generalContentCtx = createContext({})
-export const restaurantCtx = createContext({});
+export const restaurantCtx = createContext();
 
 
 const App = () => {
@@ -41,12 +41,10 @@ const App = () => {
 
     };
     
-    getData();
+  getData();
   
-
   }, []);
 
-  
 
   return (
 

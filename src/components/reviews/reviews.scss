@@ -1,12 +1,35 @@
 section {
     width: 80%;
     margin: auto;
-    background-color: white;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+
+    figure {
+
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background-color:#615B5B;
+        color: white;
+    }
 
     h1 {
-        text-align: center;
         font-size: 3rem;
+        text-align: center;
+        color: #212113;
+        margin-top: 1rem;
+        border: 2px solid black;
+    }
+
+    h3{
+        font-size: 1.7rem;
+        text-decoration: underline;
+        margin-bottom: 1rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    p{
+        margin-bottom: 1rem;
     }
 }

@@ -5,6 +5,6 @@ export const getGeneralContent = async () => {
 return await axios.get(BACKEND_URL + "/items/general_content/")
 }
 
-export const getRestaurants = () => {
- return axios.get(BACKEND_URL + "/items/restaurant/")
+export const getRestaurants = async () => {
+ return await axios.get(BACKEND_URL + "/items/restaurant/")
 }
